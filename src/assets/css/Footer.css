@@ -1,0 +1,247 @@
+.footer {
+  background-color: #010103; 
+  color: #fff;
+  display: flex;
+  padding: 40px;
+  padding-bottom: 0%;
+  height: 10%;
+  /* background-image:url(https://block16omaha.com/wp-content/uploads/2015/10/402297645_poster-1024x576.jpg);
+  background-position: center;
+   background-size: cover; */
+}
+
+.footer div {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.footer h3 {
+  margin-bottom: 10px;
+  /* border-bottom: 1px solid #555;     ye titles k nichy lines ko show kr dy ga */
+  padding-bottom: 5px;
+  font-size: 30px;
+}
+
+.footer p {
+  margin: 10px 0;
+  font-size: 15px;
+} 
+
+.footer p svg {               /* ye icons r text m space dy ga */
+  margin-right: 10px;
+}
+
+.footer-icons {
+  display: flex;  
+  gap: 15px;              /* Distance between icons */
+  align-items: center;
+  margin-bottom: 10px;
+  
+}
+
+.footer-icons svg {
+  font-size: 30px;  
+  color: white;         /* Optional: change icon color */
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.footer-icons svg:hover {
+  transform: scale(1.2);    /* Zoom effect on hover */
+  color: #ffc107;        
+} 
+
+
+.footer .elementor-widget-container{
+  font-size: 20px;
+}
+
+.footer .elementor-widget-container p{
+  font-size: 20px;
+}
+
+.email {
+  display: flex;
+  gap: 0px;                     /* Space between input and button */
+  margin-top: 10px;
+  flex-wrap: wrap;              /* for responsiveness on smaller screens */
+}
+
+.email .footer-email {
+  flex: 1;
+  padding: 10px;
+  height: 40px;
+  border-radius: 1px;
+  border: 1px solid #ffc107;
+}
+
+.email .btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffc107;
+  color: black;
+  border-radius: 1px;
+  cursor: pointer;
+  height: 40px;
+}
+
+.footer .notice .checkbox input {
+  margin-right: 10px;
+}
+
+
+.footer .notice-copy{
+  font-size: 14px;
+}
+
+.footer .Contacts-title{
+  flex: 0.4;
+}
+
+.footer .location{
+  flex: 0.5;
+  margin-left: 200px;
+}
+
+.footer .location .location-content{
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  font-size: 30px;
+}
+
+.footer .location .location-content .map-section iframe{
+  width: 500;
+  height: 320;
+  margin: 0 0;
+}     
+
+
+#legal_line {
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;   
+} 
+
+.thankyou {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.thankyou img {
+  max-width: 100%;
+  height: auto;
+  width: 400px;
+}
+
+.back-to-top {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.back-to-top:hover {
+  background-color: #ffcc00;
+  transform: scale(1.1);
+}
+
+.back-to-top .arrow {
+  font-size: 15px;
+  color: #000;
+}
+
+.back-to-top .text {
+  font-size: 10px;
+  color: #000;
+  margin-top: 2px;
+}
+
+
+
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer > div {
+    width: 100%;
+  }
+
+  .Follow-Us svg {
+    font-size: 24px;
+  }
+
+  .elementor-widget-container h2{
+    font-size: 17px;
+    text-align: center;
+  }
+  
+  .footer .elementor-widget-container p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .footer-icons {
+  display: flex;
+  justify-content: center;     /* horizontally center */
+  gap: 1.6rem;                   /* space between icons */
+  /* padding: 20px 5%; */
+  }
+
+  .email input[type="email"],
+  .email .btn {
+    width: 100%;
+  }
+
+   .notice {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 12px;
+    font-size: 2px;
+  }
+
+  .footer .notice-copy {
+    font-size: 13px;
+  }
+
+  .location {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 2rem 15px; 
+    width: 100%;
+  }
+
+  /* .location iframe {
+    border: 2px solid black;
+  } */
+
+
+  .thankyou {
+    padding: 1.5rem;
+  }
+
+  .thankyou img {
+    width: 300px;
+  }
+
+  #legal_line {
+    font-size: 12px;
+    text-align: center;
+    padding: 1rem;
+  }
+}

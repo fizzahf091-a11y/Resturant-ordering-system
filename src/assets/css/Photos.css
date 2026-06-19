@@ -1,0 +1,42 @@
+.Gallary {
+  column-count: 4;
+  column-gap: 20px;
+  padding: 30px;
+  background-color: #f9f9f9;
+}
+
+.galary-box {
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.galary-box img,
+.galary-box video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+
+
+@media (max-width: 1200px) {
+  .Gallary {
+    column-count: 3;
+  }
+}
+@media (max-width: 768px) {
+  .Gallary {
+    column-count: 2;
+  }
+}
+@media (max-width: 480px) {
+  .Gallary {
+    column-count: 1;
+  }
+}

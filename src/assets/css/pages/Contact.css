@@ -1,0 +1,109 @@
+.contact .heading {
+  text-align: center;
+  font-size: 5.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact .heading span {
+  color: #ffc107;
+}
+
+.container {
+  max-width: 800px;      /* Form width */
+  min-height: 700px;   
+  margin: 40px auto;     /* 40 top sy distance h r auto form ko center m krny k liye*/
+  padding: 30px;         /* 30 form ka form k border sy distance lany k liye*/
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);       /* agr 0 ko hta dy gy to bottom and right shadow ay ga 4px sy bottom shadow 10px sy bottom smart layer shadow   rgba(0, 0, 0, 0.1) remove krny sy overall shadow*/
+  border-radius: 12px;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-weight: 600;            /* font ko bold krny k liye */
+  margin-bottom: 5px;          /* form k tmam boxes ko border space deny k liye */
+}
+
+input[type="text"],             /* name email etc ka box bnany k liye */
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+select,                         /* options shw krwany k liye */
+textarea {
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.3s;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+select.payment {
+  background-color: #fdf7e2;
+  border: 1px solid #fbc02d;
+  font-weight: 500;
+  color: #444;
+}
+
+button {
+  background-color: #ffc107;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    font-size: 16px;
+    min-height: 600px; /* Slightly smaller height for tablets */
+  }
+
+  .contact .heading {
+    font-size: 2rem;
+  }
+
+  button[type="submit"] {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 20px;
+    padding: 15px;
+    font-size: 15px;
+    min-height: auto; /* Let it auto adjust for small screens */
+  }
+
+  .contact .heading {
+    font-size: 1.8rem;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+  }
+}

@@ -1,0 +1,20 @@
+@import  '../assets/css/nav.css';
+@import  '../assets/css/pages/Home.css';
+@import  '../assets/css/Photos.css';
+@import  '../assets/css/Specials.css';
+@import  '../assets/css/pages/About.css';
+@import  '../assets/css/pages/Contact.css';
+@import  '../assets/css/pages/Menu.css';
+@import  '../assets/css/pages/Reviews.css';
+@import  '../assets/css/Location.css';
+@import  '../assets/css/Footer.css';
+@import  '../assets/css/pages/Checkout.css';
+@import  '../assets/css/pages/Cart.css';
+@import  '../assets/css/pages/Wishlist.css';
+@import  '../assets/css/pages/Viewed.css';
+@import '../assets/css/pages/Admin.css'
+
+
+
+/* Use .. to go up one folder level.
+Use / to go down into subfolders. */

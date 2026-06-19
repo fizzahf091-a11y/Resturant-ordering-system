@@ -1,0 +1,188 @@
+
+.reviews-container {
+  position: relative;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #f4f6f8;
+  border-radius: 13px;
+  
+  
+}
+
+.close-btn {
+  position: absolute;
+  top: -10px;
+  /* top: 10px; */
+  right: 12px; 
+  font-size: 40px;
+  color: #555;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  color: #ffc107;
+}
+
+.title-box {
+  /* background-color: #ffc107; */
+  color: black;
+  margin-top: 23px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;           /* space kam kiya */
+  text-align: left;              
+
+}
+
+.title-box h3 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+
+.form-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #ffc107;
+  font-size: 20px;
+}
+
+/* Form group spacing */
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group p {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+
+.form-group textarea[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.form-group textarea[type="text"]:focus {
+  border-color: #ffc107;
+  box-shadow: #ffc107;
+}
+
+
+.stars {
+  display: flex;
+  gap: 15px;
+}
+
+.stars svg {
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.stars svg:hover,
+.stars svg:hover ~ svg {
+  color: #ffc107;
+}
+/* jesy jesy agy jay gy pechly stars py b hover apply hota jay ga otherwise jis py pointer ay gy us py hi hover ho ga */
+
+.save-btn {
+  background-color: #ffc107;         
+  color: white;                      
+  padding: 10px 20px;                 /* Size */
+  width: 100%;
+  border-radius: 8px;                 /* Rounded corners */
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.save-btn:hover {
+  transform: scale(1.05);            /* border zoom effect */
+}
+
+.save-btn:active {
+  transform: scale(0.98);            /* text zoom effect */
+}
+
+@media (max-width: 768px) {
+  .reviews-container {
+    padding: 20px;
+    margin: 30px 15px;
+  }
+
+  .title-box h3 {
+    font-size: 24px;
+  }
+
+  .form-box {
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  .form-group textarea[type="text"] {
+    font-size: 14px;
+  }
+
+  .stars svg {
+    font-size: 22px;
+    gap: 10px;
+  }
+
+  .save-btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .close-btn {
+    font-size: 32px;
+    right: 8px;
+    top: -5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews-container {
+    padding: 15px;
+    margin: 20px 10px;
+  }
+
+  .form-box {
+    padding: 15px;
+  }
+
+  .title-box h3 {
+    font-size: 20px;
+  }
+
+  .form-group textarea[type="text"] {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .save-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .close-btn {
+    font-size: 28px;
+    top: 0;
+    right: 5px;
+  }
+}

@@ -1,0 +1,59 @@
+/* ===== Specials Section Container ===== */
+.specials-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ===== Image Styling ===== */
+.specials-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Video Styling ===== */
+.specials-video {
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.specials-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Responsive CSS ===== */
+@media (max-width: 768px) {
+  .specials-container {
+    padding: 15px;
+  }
+
+  .specials-image img,
+  .specials-video video {
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .specials-container {
+    padding: 10px;
+  }
+
+  .specials-image img,
+  .specials-video video {
+    border-radius: 8px;
+  }
+}
+
+
+
+.toastBody {
+  font-family: "Atlas Grotesk Web", Arial, Helvetica, sans-serif;
+  font-size: 1.7rem ;
+}

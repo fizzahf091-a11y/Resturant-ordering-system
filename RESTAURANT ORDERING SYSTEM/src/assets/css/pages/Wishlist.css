@@ -1,0 +1,201 @@
+/* Wishlist container styling */
+.wishlist {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  background: #222;
+  padding: 1rem;
+  width: 300px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+}
+
+.wishlist.active {
+  right: 0;
+}
+
+
+/* Empty state center align */
+.wishlist-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+  text-align: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+
+
+/* Wishlist single item */
+.wishlist-item {
+  padding: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid #444;
+}
+
+/* Wishlist image container */
+.wishlist-image {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.wishlist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* Quick shop overlay */
+.quick-shop-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  color: #ffc107;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+
+/* .wishlist-image:hover .quick-shop-overlay {
+  opacity: 1;
+} */
+
+.quick-shop-overlay:hover {
+  color: #fff;
+}
+
+/* Wishlist content */
+.wishlist-content {
+  margin-top: 0.5rem;
+}
+
+.wishlist-content h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.wishlist-content p {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+
+/* Wishlist box container style (cards look) */
+.wishlist-box {
+  position: relative;
+  background: #333;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+/* Icons top-left (delete icon) */
+.wishlist-icons {
+  position: absolute;
+  top: 18px;
+  left: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.wishlist-icons svg {
+  color: white;
+  font-size: 1.8rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.wishlist-icons svg:hover {
+  background: rgba(255, 0, 0, 0.7);
+}
+
+
+/* Discount badge top-right */
+.discount-badge {
+  background-color: #ffc107;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+}
+
+/* Wishlist count badge (icon in navbar) */
+
+.wishlist-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  pointer-events: none;
+  user-select: none;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+  .wishlist {
+     width: 90vw;
+    right: -100%;
+  }
+
+  
+  .wishlist-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .wishlist-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .wishlist-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .wishlist-add,
+  .wishlist-remove {
+    width: 100%;
+  }
+}

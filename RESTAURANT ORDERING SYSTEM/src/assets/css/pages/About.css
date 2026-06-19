@@ -1,0 +1,69 @@
+.about .heading{
+    font-size: 4rem;
+    color: black;
+    text-transform: uppercase;
+}
+
+.about .heading span{
+    color: #ffc107;
+    text-transform: uppercase;
+}
+
+.about .content h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    background: #13131a;
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex: 1 1 45rem;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+
+.about .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: #fff;
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color: #ccc;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.about .content .btn{
+    text-align: center;
+    background-color: #ffc107;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+}
+
+/* Each li relative for dropdown positioning */
+ul li a {
+  display: inline-block;  /* ye component r sub component m space create kry ga */
+  border-radius: 10px;    /* is sy hum kisi b cheez ko bs bottom ki light c shap deny kliye use krty hn like navbar component ki shap */
+}
+
+/* Dropdown styling */
+ul li .dropdown {
+  top: 100%; /* just below the parent li */
+  padding: 0;
+  border-radius: 10px;
+}

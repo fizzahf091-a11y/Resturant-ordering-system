@@ -1,0 +1,372 @@
+
+body {             /* Is selector se poori website ke text ka font change hota h. */
+  font-family: Arial, sans-serif;
+  background: #010103;
+  overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track{
+     background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    border: #fff;
+    border-radius: 5rem;
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+.heading{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+}
+
+.btn:hover{
+    letter-spacing: 0.2rem;
+}
+
+.header{
+    /* background: #061b1f; */
+    background: #010103;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 7%;
+    /* border-bottom: 0.2rem solid #ffc107; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .logo img{
+    max-width: 75px;
+}
+
+.header .navbar a{
+    margin: 01rem;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.header .navbar .active-link  {
+  color: #ffc107; 
+}
+
+.header .navbar .inactive-link {
+  color: white;
+  padding: 0.5rem 1rem;
+}
+/* hover mean jesy hi curser us py jay us k color yellow ho jay r ye dono bottom b a jay */
+.header .navbar a:hover{
+    color: #ffc107;
+    border-bottom: 0.1rem solid #ffc107;
+    padding-bottom: 0.5rem;
+}
+
+/* icon m jitni b div bni hn (search, shopping cart, menu btn etc) */
+
+.header .icon{
+    display: flex;             /* Make the container a flexbox */
+    align-items: center;       /* Vertically center the icons */
+    
+}
+
+.header .icon .bi,
+.header .icon > svg {
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    font-size: 2rem;
+    margin-left: 2rem; /* Space between icons */
+}
+
+.header .icon .bi:hover {
+    color: #ffc107;
+} 
+
+.header .wishlist-icon  svg{
+  font-size: 2.5rem;
+  color: hsl(0, 0%, 100%);
+  margin-left: 2rem;
+}
+
+
+/* hmy ye bar icon bari screen py disply na ho sirf choti screen py ho is liye none kr dia */
+#menu-btn{
+    display: none;
+}
+@media (max-width: 768px) { 
+     #menu-btn{
+        display: inline-block;
+        cursor: pointer;
+        color: #fff;
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+
+    #menu-btn:hover{
+        color: #ffc107;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #000;
+        width: 13rem;
+        height: calc(100vh - 33.5rem);
+        /* height: calc(100vh - 9.5rem); */
+        flex-direction: column;
+        align-items: flex-start;
+        transition: 0.3s ease;
+    }
+
+    .header .navbar.active{
+        right: 0;
+    }
+
+    .header .navbar a{
+        color: #fff;
+        display: block;
+        margin: 1.5rem;
+    }
+}  
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+ul li {
+  position: relative;       /* ye parent li k nichy li ko show kry ga */
+}
+
+ul li a {
+  padding: 10px 15px;       /* vertically navbar k bottom sy component ki space ko kam ya ziada krny k liye */
+}
+
+/* Dropdown hidden initially */
+ul li .dropdown {
+  display: none;            /* child list ko initially hidden krny k liye */
+  position: absolute;       /* agr es ko hide kr dy gy to ye navbar k ander hi child li ko show krway ga lkn us sy navbar ki lenght b ziada ho jay gi */ 
+  background: #000;
+  
+}
+
+/* Show dropdown on hover */
+ul li:hover .dropdown {
+  display: block;             /* es sy humy parent li m child li show hn gy  */
+}
+
+
+
+ .header .search-form{
+    position:absolute;
+    top: 115%;
+    right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;                                 
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active{
+    transform: scaleY(1);
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: #13131a;
+    padding: 1rem;
+    text-transform: none;
+}
+
+.header .search-form label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: #13131a;
+}
+
+.header .search-form label:hover{
+    color: #ffc107;
+}
+
+.header .cart-items-container{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding: 0 1.5rem;
+    transition: right 0.3s ease; 
+    z-index: 999; 
+}
+
+.header .cart-items-container.active{
+    right: 0;
+}
+
+.header .cart-items-container .cart-item{
+    position:relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header .cart-items-container .cart-item .fa-times{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #13131a;
+}
+
+.header .cart-items-container .cart-item .fa-times:hover{
+    color: #ffc107;
+}
+
+.header .cart-items-container .cart-item img{
+    height: 9rem;  
+}
+
+.header .cart-items-container .cart-item .content h3{
+    font-size: 2rem;
+    color: #13131a;
+    display: flex; 
+    text-align: center;                 /*  Center text inside the container */
+    align-items: center;                /* Horizontal center  */
+    /* justify-content: center;            Vertical center*/
+  
+}
+
+.header .cart-items-container .cart-item .content .price{
+    font-size: 1.5rem;
+    color: #ffc107;
+    display: flex;
+    align-items: center; 
+    text-align: center; 
+}
+
+.header .cart-items-container .btn{
+    width: 100%;
+    text-align: center; 
+    background-color: #ffc107;
+    color: #fff;
+    font-size: 1.5rem; 
+    display: inline-block; /* use for centers */
+    padding: 10px 20px;
+} 
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .header .logo img {
+    max-width: 60px;
+  }
+
+  html {
+    font-size: 55%;        /* Choti screen pe base font size reduce */
+  }
+
+  .heading {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  section {
+    padding: 2rem 3%;
+  }
+
+  .header .search-form {
+    width: 90vw;
+    right: 5%;
+  }
+
+  .header .cart-items-container {
+    width: 35vw;
+    height: auto;
+    
+  }
+
+  .header .cart-items-container .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header .cart-items-container .cart-item img {
+    width: 60%;
+    height: auto;
+  }
+
+  .header .cart-items-container .cart-item .content h3 {
+    font-size: 1.6rem;
+  }
+
+  .header .cart-items-container .cart-item .content .price {
+    font-size: 1.4rem;
+  }
+
+  .header .cart-items-container .btn{
+    font-size: 1.4rem;
+    padding: 1rem;
+    padding-bottom: 2px;
+    width: 100%;
+}
+
+  ul {
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+  }
+
+  ul li {
+    width: 100%;
+  }
+
+  ul li .dropdown {
+    position: static;
+    width: 100%;
+  }
+}

@@ -1,0 +1,282 @@
+/* Heading */
+.viewed-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  color: white;
+}
+
+.viewed-heading span {
+  color: rgba(228, 171, 1, 1);
+}
+
+/* Grid container like Menu */
+.viewed-box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2.5rem;
+  padding: 2rem;
+}
+
+/* Box like Menu */
+.viewed-box {
+  /* border: 0.3rem solid #ffc107; */
+  padding: 0.2rem;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  /* background: #222; */
+  position: relative;
+  transition: transform 0.3s ease;
+  /* width: 450px; 
+  height: 480px; */
+}
+
+.viewed-box:hover {
+  /* background-color: #443300; */
+  transform: scale(1.03);
+  /* box-shadow: 0 0 15px rgba(255, 193, 7, 0.3); */
+}
+
+/* Icons top-left */
+.viewed-icons {
+  position: absolute;
+  top: 25px;
+  left: 10px;
+  z-index: 2;
+}
+
+.viewed-icons svg {
+  height: 5rem;
+  width: 5rem;
+  font-size: 2rem;
+  border: 0.2rem solid #ffc107;
+  border-radius: 50%;
+  margin: 0.3rem;
+  padding: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.viewed-icons svg:hover {
+  background: #ffc107;
+  color: rgb(236, 2, 2);
+}
+
+/* Image */
+.viewed-image {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.viewed-image img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  display: block;
+}
+
+/* Overlay */
+.quick-shop-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  color: #ffc107;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quick-shop-overlay:hover {
+  color: white;
+}
+
+/* Viewed text */
+.viewed-text {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 1.5rem;
+}
+
+/* Content */
+.viewed-content h4 {
+  color: #fff;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.viewed-content p {
+  color: #ccc;
+  font-size: 1.9rem;
+}
+
+/* Button */
+.clear-viewed-btn {
+  margin-bottom: 1rem;
+  padding: 0.5rem 5rem;
+  background-color: #f44336;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.7rem;
+  display: inline-block;
+}
+
+/* Empty state & text */
+.viewed-empty {
+  text-align: center;
+  color: #ccc;
+  font-size: 1.8rem;
+}
+
+.go-menu-link {
+  color: #00adc0ff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.explore-more-text {
+  font-size: 1.9rem;
+  color: white;
+  font-weight: bold;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+
+
+
+
+/*  Responsive CSS */
+
+/* Tablets and small desktops */
+@media (max-width: 992px) {
+  .viewed-heading {
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .viewed-box-container {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+  }
+
+  .viewed-image img {
+    height: 30rem;
+  }
+
+  .viewed-content h4 {
+    font-size: 2rem;
+  }
+
+  .viewed-content p {
+    font-size: 1.7rem;
+  }
+
+  .clear-viewed-btn {
+    font-size: 1.6rem;
+    padding: 0.5rem 4rem;
+  }
+
+  .viewed-icons svg {
+    height: 4.5rem;
+    width: 4.5rem;
+    font-size: 1.8rem;
+    padding: 0.8rem;
+  }
+
+  .explore-more-text {
+    font-size: 1.7rem;
+  }
+}
+
+/*  large Mobile Screen  */
+@media (max-width: 768px) {
+  .viewed-heading {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .viewed-box-container {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+  }
+
+  .viewed-image img {
+    height: 25rem;
+  }
+
+  .clear-viewed-btn {
+    font-size: 1.5rem;
+    padding: 0.5rem 3rem;
+  }
+
+  .viewed-icons svg {
+    height: 4rem;
+    width: 4rem;
+    font-size: 1.6rem;
+    padding: 0.6rem;
+  }
+
+  .viewed-content h4 {
+    font-size: 1.8rem;
+  }
+
+  .viewed-content p {
+    font-size: 1.6rem;
+  }
+
+  .explore-more-text {
+    font-size: 1.6rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .viewed-heading {
+    font-size: 2.2rem;
+  }
+
+  .viewed-box-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .viewed-image img {
+    height: 20rem;
+  }
+
+  .clear-viewed-btn {
+    font-size: 1.4rem;
+    padding: 0.4rem 2rem;
+  }
+
+  .viewed-icons svg {
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+  }
+
+  .viewed-content h4 {
+    font-size: 1.6rem;
+  }
+
+  .viewed-content p {
+    font-size: 1.4rem;
+  }
+
+  .explore-more-text {
+    font-size: 1.5rem;
+  }
+}
+
